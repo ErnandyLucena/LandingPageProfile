@@ -1,0 +1,487 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #020e0b;
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    background-color: #d8d8d80c;
+    backdrop-filter: blur(2px); /* Aplica o efeito de desfoque */
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff48; /* Adiciona uma linha branca no border-bottom */
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    border-right: 1px solid #ffffff3a; /* Adiciona uma linha branca no border-bottom */
+}
+
+.navbar-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu ul li {
+    margin: 0 20px;
+}
+
+.navbar-menu ul li a {
+    text-decoration: none;
+    color: #d8d8d8;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu ul li a:hover {
+    color: #00e9af;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+.bg {
+    width: 100%;
+    height: 100%;
+  
+    background: #00000000;
+    --gap: 7em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.075);
+  
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+  }
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+   
+}
+
+#home {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    justify-content: center;
+}
+
+.home-text h1 {
+    width: 85%;
+    position: relative;
+    line-height: 1.2;
+    font-size: 50px;
+    opacity: 0;
+    transform: translateY(100px); /* Move o h1 de baixo para cima */
+    animation: slideFromTop 1.2s ease-out forwards;
+}
+
+
+
+.home-text p {
+    width: 40%;
+    position: relative;
+    margin-top: 35px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 20px;
+    transform: translateY(-100px); /* Move o p de cima para baixo */
+    animation: slideFromBottom 1.0s ease-out forwards;
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px); /* Começa de cima */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Fica na posição normal */
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); /* Começa de baixo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Fica na posição normal */
+    }
+}
+
+.highlight {
+    color: #01ecb2;
+    font-weight: bold;
+}
+
+.botao {
+    margin-top: 5%;
+    background: linear-gradient(90deg, #00946f, #00b88a);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background: linear-gradient(90deg, #00664d, #004d39);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.botao:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+    color: #01ecb2; /* Cor específica */
+    font-weight: bold; /* Opcional: destacar ainda mais */
+}
+
+.home-text {
+    width: 50%;
+}
+
+.home-img {
+    width: 32%; /* Ocupa metade da largura */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    
+}
+
+.home-img img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção */
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.home-img img:hover {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção */
+    z-index: 50;
+    transform: scale(1.10);
+}
+
+.efeito {
+    position: absolute;
+    top: 1;
+    right: 0;
+    z-index: 1; /* Garanta que esteja abaixo de outras seções */
+    overflow: hidden;
+    pointer-events: none; /* Evita interações desnecessárias */
+
+}
+
+  
+.efeito img {
+    width: 190%;
+    opacity: 100%;
+    opacity: 0.9;
+}
+
+
+  #about {
+    display: flex;
+    background-color: #081816;
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .trace-about{
+    width: 26%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #01ecb2;
+    animation: slideFromTop 1s ease-out forwards;
+    transform: translateY(100px); /* Move o h1 de baixo para cima */
+  }
+
+  .about-img {
+    width: 40%;
+    margin-left: 50px;
+  }
+
+  .about-text {
+    width: 60%;
+  }
+  
+  
+  .about-img img {
+    width: 80%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+
+  .about-img img:hover {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção */
+    z-index: 50;
+    cursor: pointer;
+    transform: scale(1.10);
+}
+/* From Uiverse.io by MikeAndrewDesigner */ 
+  
+  .about-text h1 {
+    width: 85%;
+    position: relative;
+    line-height: 1.2;
+    font-size: 50px;
+    color: white;
+
+    opacity: 0;
+    transform: translateY(100px); /* Move o h1 de baixo para cima */
+    animation: slideFromTop 1.2s ease-out forwards;
+  }
+
+  .about-text p {
+    width: 80%;
+    position: relative;
+    margin-top: 25px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 20px;
+    transform: translateY(-100px); /* Move o p de cima para baixo */
+    animation: slideFromBottom 1.0s ease-out forwards;
+  }
+
+  .networks {
+    
+    display: flex;
+    /* Centraliza os botões horizontalmente */
+    gap: 20px; /* Espaço entre os botões */
+    margin: 30px 0px;
+}
+
+/* Estilo dos botões (cards) */
+.networks a {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    text-decoration: none;
+    background-color: #f4f4f40a;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.219); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeitos suaves */
+}
+
+/* Ajuste das imagens */
+.networks img {
+    width: 40%; /* Redimensiona as imagens para caberem no card */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Efeito hover */
+.networks a:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.582); /* Aumenta a sombra */
+    border: 1px solid #00ffaa6b;
+}
+
+/* Efeito active */
+.networks a:active {
+    transform: scale(0.95); /* Reduz ligeiramente o tamanho ao clicar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171); /* Sombra menor */
+    border: 2px solid #00ffaa;
+}
+
+
+  #skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    justify-content: center;
+    background-color: #020e0b;
+    padding: 50px;
+  }
+
+  
+    .skills-h1{
+        color: white;
+        font-size: 50px;
+    }
+
+    .skills-card-h1 {
+        color: white;
+        font-size: 27px;
+        font-weight: 500;
+    }
+
+    .card-skills p {
+       font-size: 17px;
+       color: rgba(255, 255, 255, 0.651);
+    }
+
+  .card-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 30px;
+     width: 350px;
+     height: 350px;
+     background-color: #081816;
+     border: 1px solid #00ffb325;
+     transition: 0.5s ease-out;
+     border-radius: 10px;
+     overflow: visible;
+     box-shadow: 5px 10px 21px rgb(0, 0, 0);
+     transition: all 1s ease;
+     gap: 10px;
+  }
+
+
+
+  .card-skills:hover {
+    border-color: #00f8ba;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.363);
+    transform: scale(1.01);
+   }
+
+
+  .skills-content {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  
+
+  .card-skills img {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #16003d;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .navbar-menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35%;
+    }
+
+    .navbar-menu ul li {
+        margin: 10px 0;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    #skills {
+      margin: 0;
+      padding: 50px;
+      }
+
+    .skills-content {
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .skills-h1{
+        color: white;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .skills-card-h1 {
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .card-skills p {
+       font-size: 14px;
+       color: rgba(255, 255, 255, 0.651);
+    }
+
+  .card-skills {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+     width: 100%;
+     height: 100%;
+     gap: 10px;
+  }
+
+}
