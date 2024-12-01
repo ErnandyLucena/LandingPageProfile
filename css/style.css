@@ -438,6 +438,31 @@ main {
         justify-content: center;
       }
 
+      #experience {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza verticalmente */
+        width: 100%;
+        justify-content: center;
+        background-color: #081816;
+        padding: 50px;
+      }
+    
+      
+        .experience-h1{
+            color: white;
+            font-size: 50px;
+        }
+    
+       .experience-content {
+            width: 100%;
+            margin-top: 5%;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            margin-left: 60px;
+          }
+
       
 
 /* Responsive Design */
