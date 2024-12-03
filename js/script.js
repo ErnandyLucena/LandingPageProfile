@@ -48,3 +48,35 @@ function cycleTestimonials(index) {
 }
 //run the function
 cycleTestimonials(0);
+
+
+// Função para abrir o modal e preencher com os dados
+function openModal(title, description, imageUrl) {
+  // Preenche os dados no modal
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  
+
+  // Exibe o modal
+  document.getElementById('projectModal').style.display = 'flex';
+}
+
+// Função para fechar o modal
+function closeModal() {
+  // Esconde o modal
+  document.getElementById('projectModal').style.display = 'none';
+}
+
+// Fechar o modal ao clicar fora do conteúdo
+window.onclick = function(event) {
+  if (event.target == document.getElementById('projectModal')) {
+    closeModal();
+  }
+}
+
+// Inicialização - Garanta que o modal esteja oculto ao carregar a página
+window.onload = function() {
+  document.getElementById('projectModal').style.display = 'none';
+};
+
+

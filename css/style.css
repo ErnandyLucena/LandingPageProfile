@@ -11,6 +11,38 @@ body {
     background-color: #020e0b;
 }
 
+
+::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+  height: 5px; /* Altura da barra de rolagem horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #00886a34; /* Cor do canto para barras cruzadas */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00ffab, #00ff95); /* Cor do "polegar" */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #00ffab, #00ffaa); /* Cor ao passar o mouse */
+}
+
+::-webkit-scrollbar-corner {
+  background: #33333300; /* Cor do canto para barras cruzadas */
+}
+
+/* Para navegadores que não suportam webkit */
+.scrollbar-container {
+  scrollbar-color: #00ffab #222; /* Cor do polegar e trilho */
+  scrollbar-width: thin; /* Define a largura como fina */
+}
+
+
+
 header.navbar {
     display: flex;
     justify-content: space-between;
@@ -463,7 +495,184 @@ main {
             margin-left: 60px;
           }
 
-      
+          #projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza verticalmente */
+            width: 100%;
+            justify-content: center;
+            background-color: #020e0b;
+            padding: 50px;
+          }
+        
+          
+          .projects-h1 {
+            color: #ffff;
+            font-size: 50px;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+          }
+          
+          .projects-content {
+            width: 100%;
+            margin-top: 5%;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+          
+          .card-projects {
+            width: 260px;
+            cursor: pointer;
+            height: 340px;
+            background-color: #000;
+            position: relative;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.726);
+            transition: transform 0.5s, box-shadow 0.3s;
+          }
+          
+          .card-projects:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 10, 0.616);
+          }
+          
+          .card-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-bottom: 3px solid #00f8ba;
+          }
+          
+          .card-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+          }
+          
+          .card-projects:hover .card-content img {
+            transform: scale(1.05);
+          }
+          
+          .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.87);
+            opacity: 20; /* Começa invisível */
+            transition: opacity 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+          }
+          
+          .card-projects:hover .card-overlay {
+            opacity: 0; /* Torna-se visível no hover */
+          }
+          
+          .subtitle-card h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 0 10px;
+          }
+          
+          .subtitle-card p {
+            font-size: 14px;
+            line-height: 1.4;
+          }
+
+          .modal {
+            display: none; /* Modal inicialmente escondido */
+            position: fixed;
+            z-index: 1; /* Fica sobre o conteúdo da página */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.692); /* Fundo escuro com opacidade */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease; /* Transição suave */
+          }
+
+          .modal.open {
+            display: flex; /* Torna o modal visível */
+            opacity: 1; /* Modal visível após transição */
+          }
+          
+          /* Conteúdo do Modal */
+          .modal-content {
+            background-color: #04130f;
+            display: flex;
+            
+            align-items: center;
+            padding: 60px;
+            justify-content: start;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 8px;
+            color: #333;
+            
+            transition: transform 0.3s ease; /* Animação de entrada suave */
+          }
+          
+          /* Imagem dentro do modal */
+          .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Limita a altura da imagem */
+            object-fit: cover; /* Preenche a área da imagem mantendo as proporções */
+            border-radius: 8px;
+            margin-bottom: 20px;
+          }
+          
+          .modal-titles {
+            display: flex;
+            padding: 40px;
+            flex-direction: column;
+            align-items: flex-start; /* Alinha ao topo */
+            text-align: left; /* Garante que o texto não fique centralizado */
+            margin-top: 10px;
+        }
+
+       
+          /* Estilo do botão de fechar */
+          .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease; /* Transição suave para a cor */
+          }
+          
+          /* Estilo do botão de fechar ao passar o mouse */
+          .close:hover,
+          .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
+          /* Efeito de transição suave quando o modal é aberto */
+          .modal.open {
+            display: flex; /* Torna o modal visível */
+            opacity: 1; /* Modal visível após transição */
+          }
+          
+          .modal-content.open {
+            transform: scale(1.05); /* Leve aumento do conteúdo para animação */
+          }
 
 /* Responsive Design */
 @media (max-width: 768px) {

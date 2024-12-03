@@ -170,14 +170,65 @@
             </div>
         </section>
 
-        <section id="skills">
-          <h1 class="skills-h1">
-              Serviços <span class="highlight">.</span>
+        <section id="projects">
+          <h1 class="projects-h1">
+            Projetos <span class="highlight">.</span>
           </h1>
-          <div class="skills-content">
-            
+          <div class="projects-content">
+            <!-- Card 1 -->
+            <div class="card-projects" onclick="openModal('Projeto 1', 'Descrição detalhada do projeto 1. Aqui vão mais informações sobre o projeto 1.', 'assets/site-background.png')">
+              <div class="card-content">
+                <img src="assets/site-background.png" alt="Projeto 1">
+                <div class="card-overlay">
+                  <div class="subtitle-card">
+                    <h1>Projeto 1</h1>
+                    <p>A descrição do projeto 1 vai aqui.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="card-projects" onclick="openModal('Projeto 2', 'Descrição detalhada do projeto 2. Aqui vão mais informações sobre o projeto 2.', 'assets/site-background.png')">
+              <div class="card-content">
+                <img src="assets/site-background.png" alt="Projeto 2">
+                <div class="card-overlay">
+                  <div class="subtitle-card">
+                    <h1>Projeto 2</h1>
+                    <p>A descrição do projeto 2 vai aqui.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="card-projects" onclick="openModal('Projeto 3', 'Descrição detalhada do projeto 3. Aqui vão mais informações sobre o projeto 3.', 'assets/site-background.png')">
+              <div class="card-content">
+                <img src="assets/site-background.png" alt="Projeto 3">
+                <div class="card-overlay">
+                  <div class="subtitle-card">
+                    <h1>Projeto 3</h1>
+                    <p>A descrição do projeto 3 vai aqui.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-      </section>
+        </section>
+        
+        <!-- Modal -->
+        <div id="projectModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+          
+            <div class="modal-titles">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+          </div>
+          </div>
+        </div>
+
+        
 
        
          
