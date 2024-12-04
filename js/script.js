@@ -51,10 +51,16 @@ cycleTestimonials(0);
 
 
 // Função para abrir o modal e preencher com os dados
-function openModal(title, description, imageUrl) {
+function openModal(title, description, repositoryUrl) {
   // Preenche os dados no modal
   document.getElementById('modalTitle').innerText = title;
   document.getElementById('modalDescription').innerText = description;
+
+  const repoButton = document.getElementById('repositoryButton');
+  if (repoButton) {
+    repoButton.href = repositoryUrl; // Define a URL
+    repoButton.target = "_blank"; // Abre em uma nova aba
+  }
   
 
   // Exibe o modal

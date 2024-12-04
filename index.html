@@ -117,13 +117,15 @@
                   <ul class="list">
                     <li class="item">
                       <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
-                      <label class="label_testimonial-1" for="radio_testimonial-1">Diamond Pest Elimination</label>
+                     
+                      <label class="label_testimonial-1" for="radio_testimonial-1"> <img src="assets/unimed-logo.png" alt="">Unimed Caruaru</label>
                       <div class="content-test content_testimonial-1">
+                        <img src="assets/unimed-logo.png" alt="">
                         <span class="picto"></span>
-                        <h1>Diamond Pest Elimination</h1>
-                        <p>“The team really takes pride in their work. If I didn’t know any better I would think they actually worked for my company.”</p>
-                        <p class="testimonialFrom">Bill, Owner</p>
-                        <p class="testimonialState">Rochester, NY</p>
+                        <h1>Unimed Caruaru</h1>
+                        <p>Atuando Até o presente momento como desenvolvedor Front-end e analista de dados</p>
+                        <p class="testimonialFrom">2024</p>
+                        <p class="testimonialState">Caruaru-pe</p>
                       </div>
                     </li>
                     <li class="item">
@@ -200,9 +202,45 @@
                 </div>
               </div>
             </div>
+
+            <div class="card-projects" onclick="openModal('Projeto 2', 'Descrição detalhada do projeto 2. Aqui vão mais informações sobre o projeto 2.', 'assets/site-background.png')">
+              <div class="card-content">
+                <img src="assets/site-background.png" alt="Projeto 2">
+                <div class="card-overlay">
+                  <div class="subtitle-card">
+                    <h1>Projeto 2</h1>
+                    <p>A descrição do projeto 2 vai aqui.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-projects" onclick="openModal('Projeto 2', 'Descrição detalhada do projeto 2. Aqui vão mais informações sobre o projeto 2.', 'assets/site-background.png')">
+              <div class="card-content">
+                <img src="assets/site-background.png" alt="Projeto 2">
+                <div class="card-overlay">
+                  <div class="subtitle-card">
+                    <h1>Projeto 2</h1>
+                    <p>A descrição do projeto 2 vai aqui.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-projects" onclick="openModal('Projeto 2', 'Descrição detalhada do projeto 2. Aqui vão mais informações sobre o projeto 2.', 'assets/site-background.png')">
+              <div class="card-content">
+                <img src="assets/site-background.png" alt="Projeto 2">
+                <div class="card-overlay">
+                  <div class="subtitle-card">
+                    <h1>Projeto 2</h1>
+                    <p>A descrição do projeto 2 vai aqui.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
         
             <!-- Card 3 -->
-            <div class="card-projects" onclick="openModal('Projeto 3', 'Descrição detalhada do projeto 3. Aqui vão mais informações sobre o projeto 3.', 'assets/site-background.png')">
+            <div class="card-projects" onclick="openModal('Projeto 3', 'desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'https://github.com/ErnandyLucena/LandingPageProfile')">
               <div class="card-content">
                 <img src="assets/site-background.png" alt="Projeto 3">
                 <div class="card-overlay">
@@ -219,18 +257,20 @@
         <!-- Modal -->
         <div id="projectModal" class="modal">
           <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-          
+        
             <div class="modal-titles">
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-          </div>
-          <div class="repository-btn">
-            <button class="button-repos">
-              <img src="assets/github-icon.png" alt="">
-              Repositório</button>
-          </div>
-          
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2 id="modalTitle"></h2>
+              <p id="modalDescription"></p>
+            </div>
+            
+            <div id="repository-btn" class="repository-btn">
+              <a id="repositoryButton" class="button-repos" target="_blank">
+                <img src="assets/github-icon.png" alt="Ícone do GitHub">
+                Repositório
+              </a>
+            </div>
+        
           </div>
         </div>
 
