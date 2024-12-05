@@ -385,6 +385,9 @@ main {
     justify-content: center;
     background-color: #020e0b;
     padding: 50px;
+    background-color: transparent;
+            background-image: radial-gradient(#00fabb27 1px, #e5e5f700 1px);
+            background-size: 30px 30px;
   }
 
   
@@ -503,6 +506,10 @@ main {
             justify-content: center;
             background-color: #020e0b;
             padding: 50px;
+            background-color: transparent;
+            background-image: radial-gradient(#00fabb27 1px, #e5e5f700 1px);
+            background-size: 30px 30px;
+            
           }
         
           
@@ -521,10 +528,11 @@ main {
             gap: 40px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 70px;
           }
           
           .card-projects {
-            width: 550px;
+            width:475px;
             cursor: pointer;
             height: 300px;
             background-color: #000;
@@ -562,7 +570,7 @@ main {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(2, 19, 13, 0.904);
+            background-color: rgba(2, 19, 13, 0.952);
             opacity: 20; /* Começa invisível */
             transition: opacity 0.5s;
             display: flex;
@@ -572,6 +580,24 @@ main {
             color: white;
             text-align: center;
           }
+
+          .tech {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            gap: 10px;
+          }
+
+          .tech img {
+            width: 35px;
+            background-color: #000f0b;
+            padding: 3px;
+            border-radius: 50px;
+            box-shadow: 1px 1px 10px 1px #00f8ba79;
+          }
+
+      
           
           .card-projects:hover .card-overlay {
             opacity: 0; /* Torna-se visível no hover */
@@ -587,6 +613,24 @@ main {
             font-size: 15px;
             line-height: 1.4;
           }
+           
+
+           .info-btn {
+            
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 25px;
+              background-color: #00f8ba;
+              border-radius: 50px;
+              padding: 10px;
+              font-weight: bold;
+              cursor: pointer;
+              box-shadow: 1px 1px 15px 1px #00f8ba77;
+              transition: 0.2s ease;
+              color: rgb(0, 37, 12);
+       
+           }
 
           .modal {
             display: none; /* Modal inicialmente escondido */
@@ -679,11 +723,11 @@ main {
           /* Estilo do botão de fechar */
           .close {
             color: #ffffff;
-            font-size: 30px;
+            font-size: 23px;
             font-weight: 800;
             position: absolute;
             top: 30px;
-            padding: 0px 15px;
+            padding: 0px 12px;
             right: 30px;
             cursor: pointer;
             border: 1px solid;
@@ -709,6 +753,83 @@ main {
             transform: scale(1.05); /* Leve aumento do conteúdo para animação */
           }
 
+          #footer {
+            display: flex;
+           justify-content: space-between;
+            align-items: center; /* Centraliza verticalmente */
+            width: 100%;
+            font-size: 15px;
+            background-color: #081816;
+            padding: 30px;
+          }
+
+          .footer-text {
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+            margin-left: 20px;
+          }
+          .logo-footer {
+            color: #00f8ba;
+            font-weight: 900;
+          }
+          
+          .conhecimentos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #121212; /* Exemplo de fundo */
+          }
+          
+          .conhecimentos-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 55px;
+          }
+          
+          .conhecimentos-h1 {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          
+          .conhecimentos-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px; /* Para centralizar e limitar a largura */
+          }
+          
+          .card-conhecimento {
+            width: 120px; /* Ajuste para caber 5 cards */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            background-color: #031810;
+            border: 1px solid #ffffff23;
+            border-bottom: 2px solid #00ffb3f3;
+            border-radius: 30px 0px 30px 0px;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.432);
+            transition: transform 0.5s ease;
+           
+            
+          }
+          
+          .card-conhecimento:hover {
+            transform: scale(1.1);
+            border: 1px solid #00f8baa1;
+            border-bottom: 2px solid #00ffb3f3;
+            box-shadow: 1px 1px 7px 1px #00f8ba38;
+             /* Cor ao passar o mouse */
+          }
+          
+        
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar-menu {
