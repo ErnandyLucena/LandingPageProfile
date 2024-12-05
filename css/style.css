@@ -590,11 +590,12 @@ main {
           }
 
           .tech img {
-            width: 35px;
+            width: 40px;
             background-color: #000f0b;
-            padding: 3px;
+            padding: 8px;
+            border: solid 1px #00f8baa1;
             border-radius: 50px;
-            box-shadow: 1px 1px 10px 1px #00f8ba79;
+            box-shadow: 1px 1px 8px 1px #00f8ba8c;
           }
 
       
@@ -626,7 +627,7 @@ main {
               padding: 10px;
               font-weight: bold;
               cursor: pointer;
-              box-shadow: 1px 1px 15px 1px #00f8ba77;
+              box-shadow: 1px 1px 15px 1px #00ffbf77;
               transition: 0.2s ease;
               color: rgb(0, 37, 12);
        
@@ -849,6 +850,7 @@ main {
         align-items: center;
         margin-top: 35%;
     }
+    
 
     .navbar-menu ul li {
         margin: 10px 0;
