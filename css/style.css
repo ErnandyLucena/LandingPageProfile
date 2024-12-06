@@ -864,6 +864,79 @@ main {
         display: flex;
     }
 
+    #home {
+      display: flex;
+      align-items: center; /* Centraliza verticalmente */
+      width: 100%;
+      justify-content: center;
+      padding: 10px;
+  }
+  
+  .home-text h1 {
+      width: 85%;
+      position: relative;
+      line-height: 1.2;
+      font-size: 25px;
+      opacity: 0;
+      transform: translateY(100px); /* Move o h1 de baixo para cima */
+      animation: slideFromTop 1.2s ease-out forwards;
+  }
+  
+  
+  
+  .home-text p {
+      width: 80%;
+      position: relative;
+      margin-top: 15px;
+      opacity: 0;
+      color: rgba(255, 255, 255, 0.61);
+      font-size: 10px;
+      transform: translateY(-100px); /* Move o p de cima para baixo */
+      animation: slideFromBottom 1.0s ease-out forwards;
+  }
+
+  .botao {
+    margin-top: 10%;
+    background: linear-gradient(90deg, #00946f, #00b88a);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.efeito {
+  position: absolute;
+  top: 1;
+  right: 0;
+  z-index: 1; /* Garanta que esteja abaixo de outras seções */
+  overflow: hidden;
+  pointer-events: none; /* Evita interações desnecessárias */
+
+}
+
+
+.efeito img {
+  width: 220%;
+  opacity: 75%;
+  opacity: 0.75;
+}
+
+
+.home-img {
+  width: 35%; /* Ocupa metade da largura */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  
+}
+  
+
     #skills {
       margin: 0;
       padding: 50px;
@@ -902,5 +975,94 @@ main {
      height: 100%;
      gap: 10px;
   }
+
+  #about {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza todos os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    background-color: #081816;
+    width: 100%;
+    padding: 15px;
+}
+
+.about-img {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente a imagem */
+    margin-right: 50px;
+}
+
+.about-img img {
+    width: 50%;
+    max-width: 250px; /* Define um tamanho máximo para telas maiores */
+    height: auto;
+    
+}
+
+.about-text {
+  padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o texto horizontalmente */
+    text-align: center;
+    width: 100%; /* Limita a largura do texto para centralizar melhor */
+    margin-top: 20px;
+}
+
+.about-text h1 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.about-text p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+    text-align: center; /* Garante que o texto esteja centralizado */
+}
+
+.networks {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaço entre os botões */
+    margin: 30px 0px;
+}
+
+/* Estilo dos botões (cards) */
+.networks a {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    text-decoration: none;
+    background-color: #f4f4f40a;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.219);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajuste das imagens */
+.networks img {
+    width: 50%; /* Redimensiona as imagens para caberem no card */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Efeito hover */
+.networks a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.582);
+    border: 1px solid #00ffaa6b;
+}
+
+/* Efeito active */
+.networks a:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171);
+    border: 2px solid #00ffaa;
+}
 
 }
