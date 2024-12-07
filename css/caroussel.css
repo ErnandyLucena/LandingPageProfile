@@ -142,7 +142,7 @@ input:checked ~ .content-test {
   opacity: 1;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 680px) {
   #flex-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -195,8 +195,9 @@ input:checked ~ .content-test {
     padding-top: 100px;
   }
   .item > label {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
+  
 }
 
 .content_testimonial-1 .picto {
@@ -277,6 +278,14 @@ input:checked ~ label.label_testimonial-3,
 input:checked ~ label.label_testimonial-4 {
   color: #00f8ba;
   border-right: solid 4px #00f8ba;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff00),
+    to(#00f8ba15)
+    
+  );
 }
 
 label.label_testimonial-1:before,
@@ -454,3 +463,70 @@ p.testimonialFrom {
   color: #00f8ba;
 }
 /* ============== End Testimonial Flexbox ============= */
+
+@media (max-width: 700px) {
+  #flex-container {
+    flex-direction: column; /* Empilhar os elementos */
+    align-items: center; /* Centralizar no eixo horizontal */
+    height: 60vh;
+  }
+
+  #left-zone, 
+  .content-test {
+    width: 100%; /* Garantir que ocupe toda a largura */
+    text-align: center; /* Centralizar o texto */
+  }
+
+  #right-zone {
+    
+  }
+
+  .content_testimonial-3 img {
+    display: flex;
+    margin-bottom: -40px;
+    width: 60px;
+  }
+
+  .content_testimonial-4 img {
+    display: flex;
+    margin-bottom: -20px;
+    width: 40px;
+  }
+
+  .content_testimonial-1 img {
+   
+    width: 70px;
+  }
+
+  .content_testimonial-1 h1 {
+   
+   font-size: 20px;
+  }
+
+  .content_testimonial-2 img {
+    width: 80px;
+  }
+
+  label {
+    text-align: center; /* Centralizar o texto dos rótulos */
+    display: block; /* Garantir que o texto se comporte bem */
+  }
+
+  .principal {
+    font-size: 15px;
+  }
+
+  .content-test p {
+    max-width: 100%;
+    text-align: center;
+    
+  }
+}
+
+@media (max-width: 400px) {
+  #flex-container {
+    flex-direction: column; /* Empilhar os elementos */
+    align-items: center; /* Centralizar no eixo horizontal */
+    height: 80vh;
+  }
+}
