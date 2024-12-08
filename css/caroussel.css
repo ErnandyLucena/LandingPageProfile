@@ -468,7 +468,7 @@ p.testimonialFrom {
   #flex-container {
     flex-direction: column; /* Empilhar os elementos */
     align-items: center; /* Centralizar no eixo horizontal */
-    height: 60vh;
+    height: 80vh;
   }
 
   #left-zone, 
@@ -523,10 +523,10 @@ p.testimonialFrom {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 340px) {
   #flex-container {
     flex-direction: column; /* Empilhar os elementos */
     align-items: center; /* Centralizar no eixo horizontal */
-    height: 80vh;
+    height: 90vh;
   }
 }
