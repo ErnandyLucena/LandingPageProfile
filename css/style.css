@@ -917,6 +917,21 @@ main {
         display: flex;
     }
 
+    .navbar-logo {
+      text-decoration: none;
+      color: #fff;
+      height: 100%;
+      font-weight: bold;
+      padding: 10px;
+      border-right: 1px solid #ffffff3a; /* Adiciona uma linha branca no border-bottom */
+  }
+  
+  .navbar-logo img {
+    width: 25px;
+    height: auto;
+    margin-right: 15px;
+   }
+
     #home {
       display: flex;
       align-items: start; /* Centraliza verticalmente */
@@ -959,6 +974,8 @@ main {
       animation: slideFromBottom 1.0s ease-out forwards;
   }
 
+  
+
   .botao {
     margin-top: 10%;
     background: linear-gradient(90deg, #00946f, #00b88a);
@@ -1000,6 +1017,11 @@ main {
   align-items: center; /* Centraliza a imagem verticalmente */
   margin-top: -30px;
   
+}
+
+header.navbar {
+  padding: 12px;
+
 }
 
   
