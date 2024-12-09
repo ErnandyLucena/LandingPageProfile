@@ -89,7 +89,7 @@ header.navbar {
     background-color: #d8d8d80c;
     backdrop-filter: blur(2px); /* Aplica o efeito de desfoque */
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     padding: 20px;
     border-bottom: 1px solid #ffffff48; /* Adiciona uma linha branca no border-bottom */
 }
@@ -445,6 +445,7 @@ main {
     }
 
     .card-skills p {
+
        font-size: 17px;
        color: rgba(255, 255, 255, 0.651);
     }
@@ -688,8 +689,9 @@ main {
             left: 0;
             top: 0;
             width: 100%;
+            z-index: 100;
             height: 100%;
-            background-color: rgba(0, 3, 2, 0.849); /* Fundo escuro com opacidade */
+            background-color: rgba(0, 3, 2, 0.904); /* Fundo escuro com opacidade */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -784,6 +786,10 @@ main {
             transition: color 0.3s ease; /* Transição suave para a cor */
           }
           
+          #modalTitle {
+            line-height: 1.1; /* Ajusta o espaçamento entre as linhas do h2 */
+        }
+
           /* Estilo do botão de fechar ao passar o mouse */
           .close:hover,
           .close:focus {
