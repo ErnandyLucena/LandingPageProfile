@@ -1237,6 +1237,10 @@ header.navbar {
     font-size: 32px;
   }
 
+  #conhecimentos {
+    margin-bottom: -30px;
+  }
+
   .conhecimentos-card-container img {
     width: 55px;
  }
