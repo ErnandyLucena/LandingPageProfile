@@ -86,3 +86,9 @@ window.onload = function() {
 };
 
 
+// botao fixo 
+
+document.getElementById('scrollToHomeBtn').addEventListener('click', () => {
+  document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+});
+

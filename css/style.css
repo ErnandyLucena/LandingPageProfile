@@ -11,6 +11,40 @@ body {
     background-color: #020e0b;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #31a877; /* Cor do botão */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-to-top img {
+  width: 40px;
+  height: 40px;
+}
+
+.scroll-to-top:hover {
+  background-color: #45a049; /* Cor ao passar o mouse */
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 ::-webkit-scrollbar {
   width: 6px; /* Largura da barra de rolagem */
@@ -575,7 +609,7 @@ main {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(2, 19, 13, 0.952);
+            background-color: rgba(1, 14, 9, 0.973);
             border-radius: 43px 0 43px  0 ;
             opacity: 20; /* Começa invisível */
             transition: opacity 0.5s;
@@ -781,13 +815,11 @@ main {
             font-weight: 900;
           }
           
-          .conhecimentos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #121212; /* Exemplo de fundo */
+          #conhecimentos  {
+         
+            margin-bottom: 40px;
+            padding: 0px;
+           
           }
           
           .conhecimentos-container {
@@ -813,7 +845,7 @@ main {
           }
           
           .conhecimentos-card-container img {
-             width: 70px;
+             width: 65px;
           }
           .card-conhecimento {
             width: 120px; /* Ajuste para caber 5 cards */
@@ -846,7 +878,7 @@ main {
         display: none;
         flex-direction: column;
         align-items: center;
-        background-color: #16003d;
+        background-color: #01130e;
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -887,7 +919,7 @@ main {
       width: 100%;
       position: relative;
       line-height: 1.2;
-      font-size: 25px;
+      font-size: 27px;
       opacity: 0;
       transform: translateY(100px); /* Move o h1 de baixo para cima */
       animation: slideFromTop 1.2s ease-out forwards;
@@ -919,12 +951,12 @@ main {
     background: linear-gradient(90deg, #00946f, #00b88a);
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 12px;
+    padding: 15px 23px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
-    width: 70%;
+    width: 65%;
     margin-bottom: 20%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -974,7 +1006,7 @@ main {
 
       .skills-h1{
         color: white;
-        font-size: 35px;
+        font-size: 32px;
         margin-bottom: 20px;
     }
 
@@ -1102,7 +1134,7 @@ main {
 
   .experience-h1{
     color: white;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
     }
 
@@ -1126,7 +1158,79 @@ main {
      color: rgba(255, 255, 255, 0.651);
   }
 
+  
+  .projects-h1 {
+    color: #ffff;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
 
+  .conhecimentos-h1 {
+    font-size: 32px;
+  }
+
+  .conhecimentos-card-container img {
+    width: 55px;
+ }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal-titles {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.678);
+}
+
+.button-repos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: #00f8ba;
+  border-radius: 50px;
+  padding: 10px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1px 1px 25px 1px #00f8ba77;
+  transition: 0.2s ease;
+  color: rgb(0, 37, 12);
+}
+
+.button-repos img {
+  width: 18px;
+  height: auto;
+}
+
+.repository-btn {
+  transition: 0.2s ease;
+  margin-bottom: 30px;
+ 
+}
+
+.button-repos:hover {
+  transform: scale(1.10);
+
+}
+
+.modal-titles h2 {
+  font-size: 35px;
+}
+
+.modal-titles p {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 
 }
