@@ -1,10 +1,21 @@
 // script.js
 const menuToggle = document.getElementById("menu-toggle");
 const navbarMenu = document.querySelector(".navbar-menu");
+const menuItems = document.querySelectorAll(".navbar-menu a"); // Seleciona todos os links do menu
 
+// Alterna o menu ao clicar no botão de toggle
 menuToggle.addEventListener("click", () => {
     navbarMenu.classList.toggle("show");
 });
+
+// Fecha o menu ao clicar em um item
+menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+        navbarMenu.classList.remove("show"); // Remove a classe "show"
+    });
+});
+
+
 
 
 const slides = document.querySelector('.carousel__slides');

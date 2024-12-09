@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #31a877; /* Cor do botão */
+  background-color: #31a87693; /* Cor do botão */
   color: white;
   border: none;
   border-radius: 50%;
@@ -81,9 +82,10 @@ header.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
     color: #fff;
     padding: 10px 20px;
-    position: sticky;
     background-color: #d8d8d80c;
     backdrop-filter: blur(2px); /* Aplica o efeito de desfoque */
     top: 0;
@@ -92,14 +94,20 @@ header.navbar {
     border-bottom: 1px solid #ffffff48; /* Adiciona uma linha branca no border-bottom */
 }
 
-.navbar-logo a {
+.navbar-logo {
     text-decoration: none;
     color: #fff;
-    font-size: 1.5rem;
+    height: 100%;
     font-weight: bold;
-    padding: 20px;
+    padding: 10px;
     border-right: 1px solid #ffffff3a; /* Adiciona uma linha branca no border-bottom */
 }
+
+.navbar-logo img {
+  width: 30px;
+  height: auto;
+  margin-right: 15px;
+ }
 
 .navbar-menu ul {
     display: flex;
@@ -113,7 +121,7 @@ header.navbar {
 .navbar-menu ul li a {
     text-decoration: none;
     color: #d8d8d8;
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -870,10 +878,14 @@ main {
             box-shadow: 1px 1px 7px 1px #00f8ba38;
              /* Cor ao passar o mouse */
           }
+
+          .logo-footer img {
+              width: 30px;
+          }
           
         
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-menu {
         display: none;
         flex-direction: column;
@@ -927,6 +939,7 @@ main {
 
   .home-text {
     width: 90%;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -981,7 +994,7 @@ main {
 
 
 .home-img {
-  width: 55%; /* Ocupa metade da largura */
+  width: 50%; /* Ocupa metade da largura */
   display: flex;
   justify-content: start; /* Centraliza a imagem horizontalmente */
   align-items: center; /* Centraliza a imagem verticalmente */
@@ -1232,5 +1245,113 @@ main {
   margin-bottom: 20px;
 }
 
+.footer-text {
+  font-size: 12px;
+  width: 75%;
+}
 
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) { 
+
+  #home {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    justify-content: center;
+}
+
+.home-text h1 {
+    width: 85%;
+    position: relative;
+    line-height: 1.2;
+    font-size: 40px;
+    opacity: 0;
+    transform: translateY(100px); /* Move o h1 de baixo para cima */
+    animation: slideFromTop 1.2s ease-out forwards;
+}
+
+.home-text {
+ margin-bottom: 50px;
+ margin-top: 100px;
+}
+
+
+
+.home-text p {
+    width: 60%;
+    position: relative;
+    margin-top: 35px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 20px;
+    transform: translateY(-100px); /* Move o p de cima para baixo */
+    animation: slideFromBottom 1.0s ease-out forwards;
+}
+
+
+.highlight {
+    color: #01ecb2;
+    font-weight: bold;
+}
+
+.botao {
+    margin-top: 5%;
+    background: linear-gradient(90deg, #00946f, #00b88a);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+  #skills {
+      margin: 0;
+      padding: 50px;
+      }
+
+    .skills-content {
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .skills-h1{
+        color: white;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .skills-card-h1 {
+        color: white;
+        font-size: 30px;
+
+    }
+
+    
+  .card-skills img {
+    width: 12%;
+    margin-bottom: 20px;
+  }
+
+    .card-skills p {
+       font-size: 20px;
+       color: rgba(255, 255, 255, 0.651);
+    }
+
+  .card-skills {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+     width: 100%;
+     height: 100%;
+     gap: 10px;
+  }
 }
