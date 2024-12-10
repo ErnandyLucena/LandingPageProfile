@@ -858,7 +858,7 @@ main {
          
             margin-bottom: 40px;
             padding: 0px;
-           
+            margin-top: 30px;
           }
           
           .conhecimentos-container {
@@ -1238,10 +1238,13 @@ header.navbar {
 
   .conhecimentos-h1 {
     font-size: 32px;
+
   }
 
   #conhecimentos {
     margin-bottom: -30px;
+  
+  
   }
 
   .conhecimentos-card-container img {
